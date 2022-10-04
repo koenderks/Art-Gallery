@@ -53,8 +53,10 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_mesh</span><span class="op">(</span><span class="va">colors</span>, background <span class="op">=</span> <span class="st">"#fafafa"</span>, n <span class="op">=</span> <span class="fl">300</span>,</span>
-<span>             iterations <span class="op">=</span> <span class="fl">500</span>, mixProb <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_mesh</span><span class="op">(</span><span class="va">colors</span>, background <span class="op">=</span> <span class="st">"#fafafa"</span>, </span>
+<span>             transform <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"perlin"</span>, <span class="st">"fbm"</span>, <span class="st">"simplex"</span>, <span class="st">"cubic"</span>,</span>
+<span>                           <span class="st">"worley"</span>, <span class="st">"knn"</span>, <span class="st">"rf"</span>, <span class="st">"svm"</span><span class="op">)</span>,</span>
+<span>             n <span class="op">=</span> <span class="fl">301</span>, iterations <span class="op">=</span> <span class="fl">500</span>, mixProb <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -67,6 +69,10 @@
 <dd><p>a character specifying the color used for the background (and the hole).</p></dd>
 
 
+<dt>transform</dt>
+<dd><p>a character specifying the type of transformation to use for the radius.</p></dd>
+
+
 <dt>n</dt>
 <dd><p>an integer specifying the number of lines.</p></dd>
 
@@ -76,7 +82,7 @@
 
 
 <dt>mixProb</dt>
-<dd><p>a value between 0 and 1 specifying the mixing probability.</p></dd>
+<dd><p>a value between 0 and 1 specifying the probability of a line segment having another color.</p></dd>
 
 </dl></div>
     <div id="value">
