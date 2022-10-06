@@ -53,8 +53,9 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_flame</span><span class="op">(</span><span class="va">colors</span>, background <span class="op">=</span> <span class="st">"#000000"</span>, iterations <span class="op">=</span> <span class="fl">500000</span>,</span>
-<span>                      resolution <span class="op">=</span> <span class="fl">1000</span>, span <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_flame</span><span class="op">(</span><span class="va">colors</span>, background <span class="op">=</span> <span class="st">"#000000"</span>,</span>
+<span>                      iterations <span class="op">=</span> <span class="fl">1000000</span>, resolution <span class="op">=</span> <span class="fl">1000</span>,</span>
+<span>                      blend <span class="op">=</span> <span class="cn">TRUE</span>, post <span class="op">=</span> <span class="cn">FALSE</span>, final <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -75,8 +76,16 @@
 <dd><p>resolution of the artwork in pixels per row/column. Increasing the resolution increases the quality of the artwork but also increases the computation time exponentially.</p></dd>
 
 
-<dt>span</dt>
-<dd><p>a value indicating the width.</p></dd>
+<dt>blend</dt>
+<dd><p>logical. Whether to blend the variations (<code>TRUE</code>) or pick a unique variation in each iteration (<code>FALSE</code>).</p></dd>
+
+
+<dt>post</dt>
+<dd><p>logical. Whether to apply a posttransformation in each iteration.</p></dd>
+
+
+<dt>final</dt>
+<dd><p>logical. Whether to apply a final transformation in each iteration.</p></dd>
 
 </dl></div>
     <div id="value">
