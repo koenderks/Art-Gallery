@@ -55,7 +55,8 @@
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_flame</span><span class="op">(</span><span class="va">colors</span>, background <span class="op">=</span> <span class="st">"#000000"</span>, variations <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>                      iterations <span class="op">=</span> <span class="fl">1000000</span>, resolution <span class="op">=</span> <span class="fl">1000</span>,</span>
-<span>                      blend <span class="op">=</span> <span class="cn">TRUE</span>, post <span class="op">=</span> <span class="cn">FALSE</span>, final <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<span>                      blend <span class="op">=</span> <span class="cn">TRUE</span>, post <span class="op">=</span> <span class="cn">FALSE</span>, final <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>                      verbose <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -90,6 +91,10 @@
 
 <dt>final</dt>
 <dd><p>logical. Whether to apply a final transformation in each iteration.</p></dd>
+
+
+<dt>verbose</dt>
+<dd><p>logical. Whether to print information.</p></dd>
 
 </dl></div>
     <div id="value">
@@ -132,7 +137,7 @@
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Simple example</span></span></span>
 <span class="r-in"><span><span class="fu">canvas_flame</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"origami"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in iterate_flame(iterations = iterations, variations = variations,     point = stats::runif(2, -1, 1), w_i = w_i/sum(w_i), v_ij = v_ij,     mat_coef = matrix(stats::runif(nfunc * 6, min = -1, max = 1),         nrow = nfunc, ncol = 6), p_coef = matrix(stats::runif(nfunc *         6, min = -1, max = 1), nrow = nfunc, ncol = 6), f_coef = stats::runif(6,         min = -1, max = 1), p2_coef = stats::runif(6, min = -1,         max = 1), blend_var = blend, transform_p = post, transform_f = final):</span> Mat::operator(): index out of bounds</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in canvas_flame(colors = colorPalette("origami")):</span> object 'maxVariations' not found</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
