@@ -54,10 +54,10 @@
 
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_flame</span><span class="op">(</span><span class="va">colors</span>, background <span class="op">=</span> <span class="st">"#fafafa"</span>,</span>
-<span>                      iterations <span class="op">=</span> <span class="fl">1000000</span>, zoom <span class="op">=</span> <span class="fl">1</span>, resolution <span class="op">=</span> <span class="fl">1000</span>,</span>
-<span>                      variations <span class="op">=</span> <span class="cn">NULL</span>, blend <span class="op">=</span> <span class="cn">TRUE</span>, </span>
-<span>                      post <span class="op">=</span> <span class="cn">FALSE</span>, final <span class="op">=</span> <span class="cn">FALSE</span>, extra <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>                      verbose <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<span>             iterations <span class="op">=</span> <span class="fl">1000000</span>, zoom <span class="op">=</span> <span class="fl">1</span>, resolution <span class="op">=</span> <span class="fl">1000</span>,</span>
+<span>             variations <span class="op">=</span> <span class="cn">NULL</span>, blend <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>             post <span class="op">=</span> <span class="cn">FALSE</span>, final <span class="op">=</span> <span class="cn">FALSE</span>, extra <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>             verbose <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -162,6 +162,10 @@
 <span class="r-in"><span><span class="co"># Simple example</span></span></span>
 <span class="r-in"><span><span class="fu">canvas_flame</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"origami"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="canvas_flame-1.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Advanced example (no-blend sine and spherical variations)</span></span></span>
+<span class="r-in"><span><span class="fu">canvas_flame</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"origami"</span><span class="op">)</span>, variations <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, blend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="canvas_flame-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
