@@ -53,7 +53,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_flame</span><span class="op">(</span><span class="va">colors</span>, background <span class="op">=</span> <span class="st">"#fafafa"</span>,</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_flame</span><span class="op">(</span><span class="va">colors</span>, background <span class="op">=</span> <span class="st">"#000000"</span>,</span>
 <span>             iterations <span class="op">=</span> <span class="fl">1000000</span>, zoom <span class="op">=</span> <span class="fl">1</span>, resolution <span class="op">=</span> <span class="fl">1000</span>,</span>
 <span>             variations <span class="op">=</span> <span class="cn">NULL</span>, blend <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>             display <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"colored"</span>, <span class="st">"logdensity"</span><span class="op">)</span>,</span>
@@ -88,7 +88,7 @@
 
 
 <dt>blend</dt>
-<dd><p>logical. Whether to blend the variations (<code>TRUE</code>) or pick a unique variation in each iteration (<code>FALSE</code>). <code>blend = FALSE</code> significantly speeds up the computation time if you include many variations.</p></dd>
+<dd><p>logical. Whether to blend the variations (<code>TRUE</code>) or pick a unique variation in each iteration (<code>FALSE</code>). <code>blend = FALSE</code> significantly speeds up the computation time.</p></dd>
 
 
 <dt>display</dt>
@@ -189,7 +189,7 @@
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Simple example</span></span></span>
-<span class="r-in"><span><span class="fu">canvas_flame</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"origami"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">canvas_flame</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"dodgerblue"</span>, <span class="st">"green"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="canvas_flame-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Advanced example (no-blend sine and spherical variations)</span></span></span>
