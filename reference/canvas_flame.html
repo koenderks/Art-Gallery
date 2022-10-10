@@ -55,7 +55,7 @@
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_flame</span><span class="op">(</span><span class="va">colors</span>, background <span class="op">=</span> <span class="st">"#000000"</span>,</span>
 <span>             iterations <span class="op">=</span> <span class="fl">1000000</span>, zoom <span class="op">=</span> <span class="fl">1</span>, resolution <span class="op">=</span> <span class="fl">1000</span>,</span>
-<span>             variations <span class="op">=</span> <span class="cn">NULL</span>, blend <span class="op">=</span> <span class="cn">TRUE</span>, weighted <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>             variations <span class="op">=</span> <span class="fl">0</span>, blend <span class="op">=</span> <span class="cn">TRUE</span>, weighted <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>             display <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"colored"</span>, <span class="st">"logdensity"</span><span class="op">)</span>,</span>
 <span>             post <span class="op">=</span> <span class="cn">FALSE</span>, final <span class="op">=</span> <span class="cn">FALSE</span>, extra <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -83,7 +83,7 @@
 
 
 <dt>variations</dt>
-<dd><p>an integer (vector) specifying the variations to be included in the flame. The default <code>NULL</code> includes no variations. See the details section for more information about possible variations.</p></dd>
+<dd><p>an integer (vector) specifying the variations to be included in the flame. The default <code>0</code> includes only a linear variation. See the details section for more information about possible variations.</p></dd>
 
 
 <dt>blend</dt>
@@ -187,8 +187,8 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co"># Simple example, no variation applied, relatively few iterations</span></span></span>
-<span class="r-in"><span><span class="fu">canvas_flame</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"dodgerblue"</span>, <span class="st">"green"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># Simple example, linear variation, relatively few iterations</span></span></span>
+<span class="r-in"><span><span class="fu">canvas_flame</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"dodgerblue"</span>, <span class="st">"green"</span><span class="op">)</span>, variations <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="canvas_flame-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Advanced example (no-blend, weighted, sine and spherical variations)</span></span></span>
