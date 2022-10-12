@@ -71,7 +71,7 @@
 
 
 <dt>iterations</dt>
-<dd><p>a positive integer specifying the number of iterations of the algorithm.</p></dd>
+<dd><p>a positive integer specifying the number of iterations of the algorithm. Using more iterations results in images of higher quality but also increases the computation time.</p></dd>
 
 
 <dt>variations</dt>
@@ -127,7 +127,7 @@
     <div id="details">
     <h2>Details</h2>
     <p>The <code>variation</code> argument can be used to include specific variations into the flame. See the appendix in the references for examples of all variations. Possible variations are:</p>
-<ul><li><p><code>0</code>: Linear</p></li>
+<ul><li><p><code>0</code>: Linear (default)</p></li>
 <li><p><code>1</code>: Sine</p></li>
 <li><p><code>2</code>: Spherical</p></li>
 <li><p><code>3</code>: Swirl</p></li>
@@ -177,7 +177,7 @@
 <li><p><code>47</code>: Twintrian</p></li>
 <li><p><code>48</code>: Cross</p></li>
 </ul><p>The <code>symmetry</code> argument can be used to include symmetry into the flame. Possible options are:</p>
-<ul><li><p><code>0</code>: Linear</p></li>
+<ul><li><p><code>0</code>: No symmetry (default)</p></li>
 <li><p><code>-1</code>: Dihedral symmetry</p></li>
 <li><p><code>1</code>: Two-way rotational symmetry</p></li>
 <li><p><code>(-)2</code>: (Dihedral) Three-way rotational symmetry</p></li>
