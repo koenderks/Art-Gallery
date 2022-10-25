@@ -334,7 +334,7 @@
 <div class="section level4">
 <h4 id="turmite">Turmite<a class="anchor" aria-label="anchor" href="#turmite"></a>
 </h4>
-<p>According to <a href="https://en.wikipedia.org/wiki/Turmite" class="external-link">Wikipedia</a>, a turmite is <em>“a Turing machine which has an orientation in addition to a current state and a”tape" that consists of an infinite two-dimensional grid of cells"</em>. The classic algorithm consists of repeating the following three simple steps:</p>
+<p>According to <a href="https://en.wikipedia.org/wiki/Turmite" class="external-link">Wikipedia</a>, a turmite is <em>“a Turing machine which has an orientation in addition to a current state and a”tape” that consists of an infinite two-dimensional grid of cells”</em>. The classic algorithm consists of repeating the following three simple steps:</p>
 <ol style="list-style-type: decimal">
 <li>Turn on the spot (left, right, up, or down),</li>
 <li>Change the color of the block,</li>
@@ -402,9 +402,9 @@
 <p>This function creates colored ribbons with (or without) a triangle that breaks their paths. This path of the ribbon polygon is creating by picking one point on the left side of the triangle and one point on the right side at random and using these points as nodes.</p>
 <p align="center"><img src="https://github.com/koenderks/aRtsy/raw/development/png/ribbons/2021-07-16.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/ribbons/2021-07-15.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/ribbons/2021-07-14.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_ribbons.html">canvas_ribbons()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb25-2"><a href="#cb25-2"></a><span class="kw">canvas_ribbons</span>(<span class="dt">colors =</span> <span class="kw">colorPalette</span>(<span class="st">"retro1"</span>)</span>
-<span id="cb25-3"><a href="#cb25-3"></a><span class="co"># see ?canvas_ribbons for more input parameters of this function</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">canvas_ribbons</span>(<span class="at">colors =</span> <span class="fu">colorPalette</span>(<span class="st">"retro1"</span>)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># see ?canvas_ribbons for more input parameters of this function</span></span></code></pre></div>
 </div>
 <div class="section level4">
 <h4 id="segments">Segments<a class="anchor" aria-label="anchor" href="#segments"></a>
