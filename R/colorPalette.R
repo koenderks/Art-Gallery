@@ -79,7 +79,7 @@ colorPalette <- function(name, n = NULL) {
   } else {
     if (name == "random-palette") {
       name <- sample(c(
-        "blackwhite", "bell", "boogy1", "boogy2", "boogy3", "dark1", "dark2", "dark3", "flora","flag", "gogh", "house", "jasp", "jfa", "jungle",
+        "blackwhite", "bell", "boogy1", "boogy2", "boogy3", "dark1", "dark2", "dark3", "flora", "flag", "gogh", "house", "jasp", "jfa", "jungle",
         "klimt", "kpd", "lava", "nature", "mixer1", "mixer2", "mixer3", "mixer4", "neon1", "neon2", "origami", "retro1", "retro2",
         "retro3", "retro4", "sooph", "sky", "tuscany1", "tuscany2", "tuscany3", "vrolik1", "vrolik2", "vrolik3", "vrolik4", "vrolik5"
       ), size = 1)
@@ -94,7 +94,7 @@ colorPalette <- function(name, n = NULL) {
       "dark2" = c("#1B262C", "#0F4C75", "#3282B8", "#BBE1FA"),
       "dark3" = c("#222831", "#393E46", "#00ADB5", "#EEEEEE"),
       "flora" = c("#000000", "#f2f2eb", "#ccb77c", "#523402"),
-      "flag" = c("#002F6C", "#0067B9", "#A7C6ED", "#CFCDC9", "#BA0C2F", "#651D32")
+      "flag" = c("#002F6C", "#0067B9", "#A7C6ED", "#CFCDC9", "#BA0C2F", "#651D32"),
       "gogh" = c("#8699b5", "#161918", "#9d8018", "#232d8a", "#b4ad5a", "#c2ccd5"),
       "house" = c("#191919", "white", "#ab3920", "#cca222", "#036440"),
       "jasp" = c("#14a1e3", "#ffffff", "#f7971c", "#8cc63e", "#000000"),
