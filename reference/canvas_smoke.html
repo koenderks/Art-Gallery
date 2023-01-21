@@ -65,7 +65,8 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_smoke</span><span class="op">(</span><span class="va">colors</span>, resolution <span class="op">=</span> <span class="fl">100</span>, distance <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"minimum"</span>, <span class="st">"average"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_smoke</span><span class="op">(</span><span class="va">colors</span>, resolution <span class="op">=</span> <span class="fl">100</span>, compute <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"minimum"</span>, <span class="st">"average"</span><span class="op">)</span>,</span>
+<span>             distance <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"euclidean"</span>, <span class="st">"manhattan"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -78,8 +79,12 @@
 <dd><p>resolution of the artwork in pixels per row/column. Increasing the resolution increases the quality of the artwork but also increases the computation time exponentially.</p></dd>
 
 
+<dt>compute</dt>
+<dd><p>a character specifying how to select a new pixel. The default option <code>minimum</code> selects the pixel with the smallest color difference in a single neighbor and is relatively fast. The option <code>average</code> selects the pixel with the smallest average color difference in all the neighbors and is relatively slow.</p></dd>
+
+
 <dt>distance</dt>
-<dd><p>an character specifying how to select a new pixel. The default option <code>minimum</code> selects the pixel with the smallest color difference in a single neighbor and is relatively fast. The option <code>average</code> selects the pixel with the smallest average color difference in all the neighbors and is relatively slow.</p></dd>
+<dd><p>an character specifying the type of distance to compute for each possible neighbor.</p></dd>
 
 </dl></div>
     <div id="value">
