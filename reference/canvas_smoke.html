@@ -65,8 +65,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_smoke</span><span class="op">(</span><span class="va">colors</span>, resolution <span class="op">=</span> <span class="fl">100</span>, compute <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"minimum"</span>, <span class="st">"average"</span><span class="op">)</span>,</span>
-<span>             distance <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"euclidean"</span>, <span class="st">"manhattan"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_smoke</span><span class="op">(</span><span class="va">colors</span>, resolution <span class="op">=</span> <span class="fl">200</span>, compute <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"minimum"</span>, <span class="st">"average"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -81,10 +80,6 @@
 
 <dt>compute</dt>
 <dd><p>a character specifying how to select a new pixel. The default option <code>minimum</code> selects the pixel with the smallest color difference in a single neighbor and is relatively fast. The option <code>average</code> selects the pixel with the smallest average color difference in all the neighbors and is relatively slow.</p></dd>
-
-
-<dt>distance</dt>
-<dd><p>an character specifying the type of distance to compute for each possible neighbor.</p></dd>
 
 </dl></div>
     <div id="value">
@@ -112,8 +107,12 @@
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Simple example</span></span></span>
-<span class="r-in"><span><span class="fu">canvas_smoke</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"random"</span>, <span class="fl">1024</span><span class="op">)</span>, resolution <span class="op">=</span> <span class="fl">250</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">canvas_smoke</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"random"</span>, <span class="fl">1024</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="canvas_smoke-1.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Advanced example</span></span></span>
+<span class="r-in"><span><span class="fu">canvas_smoke</span><span class="op">(</span>colors <span class="op">=</span> <span class="st">"all"</span>, resolution <span class="op">=</span> <span class="fl">500</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="canvas_smoke-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
