@@ -302,7 +302,7 @@
 <span><span class="co"># see ?canvas_planet for more input parameters of this function</span></span></code></pre></div>
 </div>
 <div class="section level4">
-<h4 id="split-lines">Split Lines<a class="anchor" aria-label="anchor" href="#split-lines"></a>
+<h4 id="split-lines">Split lines<a class="anchor" aria-label="anchor" href="#split-lines"></a>
 </h4>
 <p>This function generates a <a href="https://en.wikipedia.org/wiki/Fractal_curve" class="external-link">fractal curve</a>. It starts with four simple lines and proceeds to split each line in four new line segments. If this action is repeated for some time, and each time the same split is made, the end product is a fractal curve. The fractal curve in this function (optionally) uses some noise to create random distortions in the curve.</p>
 <p align="center">
@@ -314,7 +314,7 @@
 <span><span class="co"># see ?canvas_splits for more input parameters of this function</span></span></code></pre></div>
 </div>
 <div class="section level4">
-<h4 id="rainbow-smoke">Rainbow Smoke<a class="anchor" aria-label="anchor" href="#rainbow-smoke"></a>
+<h4 id="rainbow-smoke">Rainbow smoke<a class="anchor" aria-label="anchor" href="#rainbow-smoke"></a>
 </h4>
 <p>This function implements the <a href="http://rainbowsmoke.hu/home" class="external-link">rainbow smoke</a> algorithm, an original idea from Jozsef Fejes. The algorithm works as follows: First, we select an initial color and apply it to a randomly chosen pixel. Next, we proceed to use the remaining colors one at the time and color pixels in a manner where colors that are alike are positioned near each other.</p>
 <p align="center">
@@ -362,9 +362,9 @@
 <span><span class="co"># see ?canvas_phyllotaxis for more input parameters of this function</span></span></code></pre></div>
 </div>
 <div class="section level4">
-<h4 id="portuguese-tiles">Portuguese Tiles<a class="anchor" aria-label="anchor" href="#portuguese-tiles"></a>
+<h4 id="portuguese-tiles">Portuguese tiles<a class="anchor" aria-label="anchor" href="#portuguese-tiles"></a>
 </h4>
-<p>This function tries to simulate the intricate design of Portuguese-style tiles. The technique employed to create this effect is a reaction-diffusion model (excellently described in these three blogposts: <a href="https://itp.uni-frankfurt.de/~gros/StudentProjects/Projects_2020/projekt_schulz_kaefer/" class="external-link">link</a>, <a href="https://www.karlsims.com/rd.html" class="external-link">link</a> and <a href="https://fronkonstin.com" class="external-link">link</a>) to fill the surface of the tile. Next, the tile is rotated and duplicated to get a look that is reminiscent of the distinctive appearance of traditional Portuguese tiles.</p>
+<p>This function attempts to recreate the intricate design of Portuguese-style wall tiles. The algorithm uses a reaction-diffusion model (excellently described in these three blogposts: <a href="https://itp.uni-frankfurt.de/~gros/StudentProjects/Projects_2020/projekt_schulz_kaefer/" class="external-link">link</a>, <a href="https://www.karlsims.com/rd.html" class="external-link">link</a> and <a href="https://fronkonstin.com" class="external-link">link</a>), which simulates the process of chemicals reacting and diffusing on a surface, to generate an initial quarter tile. Next, the quarter tile is rotated and duplicated to get the symmetric look that is reminiscent of a traditional Portuguese wall tile.</p>
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/tiles/2023-04-29.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/tiles/2023-04-28.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/tiles/2023-04-27.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_tiles.html">canvas_tiles()</a></code> function to make your own artwork using this algorithm.</p>
@@ -374,7 +374,7 @@
 <span><span class="co"># see ?canvas_tiles for more input parameters of this function</span></span></code></pre></div>
 </div>
 <div class="section level4">
-<h4 id="recamáns-sequence">Recamán’s Sequence<a class="anchor" aria-label="anchor" href="#recam%C3%A1ns-sequence"></a>
+<h4 id="recamáns-sequence">Recamán’s sequence<a class="anchor" aria-label="anchor" href="#recam%C3%A1ns-sequence"></a>
 </h4>
 <p>This function draws Recamán’s sequence on a canvas. The algorithm takes increasingly large steps backwards on the positive number line, but takes a step forward if it is unable to perform the step backwards.</p>
 <p align="center">
