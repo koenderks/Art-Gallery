@@ -66,7 +66,7 @@
 
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_tiles</span><span class="op">(</span><span class="va">colors</span>, background <span class="op">=</span> <span class="st">"#ffffff"</span>, iterations <span class="op">=</span> <span class="fl">1000</span>,</span>
-<span>             duplicates <span class="op">=</span> <span class="fl">5</span>, col.line <span class="op">=</span> <span class="st">"#000000"</span>, resolution <span class="op">=</span> <span class="fl">100</span>,</span>
+<span>             size <span class="op">=</span> <span class="fl">5</span>, col.line <span class="op">=</span> <span class="st">"#000000"</span>, resolution <span class="op">=</span> <span class="fl">100</span>,</span>
 <span>             flatten <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -84,12 +84,12 @@
 <dd><p>a positive integer specifying the number of iterations of the algorithm.</p></dd>
 
 
-<dt>duplicates</dt>
-<dd><p>a non-negative integer specifying how many times the tile should be duplicated.</p></dd>
+<dt>size</dt>
+<dd><p>a positive integer specifying how many tiles should be in each row of the wall.</p></dd>
 
 
 <dt>col.line</dt>
-<dd><p>a character specifying the color of the tile borders.</p></dd>
+<dd><p>a character specifying the color of the joints between the tiles.</p></dd>
 
 
 <dt>resolution</dt>
@@ -97,7 +97,7 @@
 
 
 <dt>flatten</dt>
-<dd><p>logical, should colors be flattened after being assigned to a point.</p></dd>
+<dd><p>logical, should colors be flattened after being put on the tile.</p></dd>
 
 </dl></div>
     <div id="value">
@@ -108,7 +108,7 @@
     </div>
     <div id="references">
     <h2>References</h2>
-    <p><a href="https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system" class="external-link">https://en.wikipedia.org/wiki/Reaction–diffusion_system</a> <a href="https://www.karlsims.com/rd.html" class="external-link">https://www.karlsims.com/rd.html</a></p>
+    <p><a href="https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system" class="external-link">https://en.wikipedia.org/wiki/Reaction–diffusion_system</a></p>
     </div>
     <div id="see-also">
     <h2>See also</h2>
