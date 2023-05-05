@@ -229,23 +229,23 @@
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Simple example, linear variation, relatively few iterations</span></span></span>
 <span class="r-in"><span><span class="fu">canvas_flame</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"dodgerblue"</span>, <span class="st">"green"</span><span class="op">)</span>, variations <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="canvas_flame-1.png" alt="" width="480" height="480"></span>
+<span class="r-plt img"><img src="canvas_flame-1.png" alt="" width="2500" height="2500"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Simple example, linear variation, dihedral symmetry</span></span></span>
 <span class="r-in"><span><span class="fu">canvas_flame</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hotpink"</span>, <span class="st">"yellow"</span><span class="op">)</span>, variations <span class="op">=</span> <span class="fl">0</span>, symmetry <span class="op">=</span> <span class="op">-</span><span class="fl">1</span>, iterations <span class="op">=</span> <span class="fl">1e7</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="canvas_flame-2.png" alt="" width="480" height="480"></span>
+<span class="r-plt img"><img src="canvas_flame-2.png" alt="" width="2500" height="2500"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Advanced example (no-blend, weighted, sine and spherical variations)</span></span></span>
 <span class="r-in"><span><span class="fu">canvas_flame</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  colors <span class="op">=</span> <span class="fu"><a href="colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"origami"</span><span class="op">)</span>, variations <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  blend <span class="op">=</span> <span class="cn">FALSE</span>, weighted <span class="op">=</span> <span class="cn">TRUE</span>, iterations <span class="op">=</span> <span class="fl">1e8</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="canvas_flame-3.png" alt="" width="480" height="480"></span>
+<span class="r-plt img"><img src="canvas_flame-3.png" alt="" width="2500" height="2500"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># More iterations give much better images</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">canvas_flame</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"blue"</span><span class="op">)</span>, iterations <span class="op">=</span> <span class="fl">1e8</span>, variations <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">17</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="canvas_flame-4.png" alt="" width="480" height="480"></span>
+<span class="r-plt img"><img src="canvas_flame-4.png" alt="" width="2500" height="2500"></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
