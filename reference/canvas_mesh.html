@@ -65,10 +65,15 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_mesh</span><span class="op">(</span><span class="va">colors</span>, background <span class="op">=</span> <span class="st">"#fafafa"</span>,</span>
-<span>             transform <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"perlin"</span>, <span class="st">"fbm"</span>, <span class="st">"simplex"</span>, <span class="st">"cubic"</span>,</span>
-<span>                           <span class="st">"worley"</span>, <span class="st">"knn"</span>, <span class="st">"rf"</span>, <span class="st">"svm"</span><span class="op">)</span>,</span>
-<span>             lines <span class="op">=</span> <span class="fl">500</span>, iterations <span class="op">=</span> <span class="fl">500</span>, mixprob <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_mesh</span><span class="op">(</span></span>
+<span>  <span class="va">colors</span>,</span>
+<span>  background <span class="op">=</span> <span class="st">"#fafafa"</span>,</span>
+<span>  transform <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"perlin"</span>, <span class="st">"fbm"</span>, <span class="st">"simplex"</span>, <span class="st">"cubic"</span>,</span>
+<span>                <span class="st">"worley"</span>, <span class="st">"knn"</span>, <span class="st">"rf"</span>, <span class="st">"svm"</span><span class="op">)</span>,</span>
+<span>  lines <span class="op">=</span> <span class="fl">500</span>,</span>
+<span>  iterations <span class="op">=</span> <span class="fl">500</span>,</span>
+<span>  mixprob <span class="op">=</span> <span class="fl">0</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -123,7 +128,7 @@
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Simple example</span></span></span>
 <span class="r-in"><span><span class="fu">canvas_mesh</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"origami"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="canvas_mesh-1.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="canvas_mesh-1.png" alt="" width="700" height="700"></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>

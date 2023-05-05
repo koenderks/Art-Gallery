@@ -65,10 +65,17 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_mandelbrot</span><span class="op">(</span><span class="va">colors</span>, iterations <span class="op">=</span> <span class="fl">100</span>, zoom <span class="op">=</span> <span class="fl">1</span>,</span>
-<span>                   set <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"mandelbrot"</span>, <span class="st">"multibrot"</span>, <span class="st">"julia"</span>, <span class="st">"ship"</span><span class="op">)</span>,</span>
-<span>                   left <span class="op">=</span> <span class="op">-</span><span class="fl">2.16</span>, right <span class="op">=</span> <span class="fl">1.16</span>, bottom <span class="op">=</span> <span class="op">-</span><span class="fl">1.66</span>, top <span class="op">=</span> <span class="fl">1.66</span>,</span>
-<span>                   resolution <span class="op">=</span> <span class="fl">500</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">canvas_mandelbrot</span><span class="op">(</span></span>
+<span>  <span class="va">colors</span>,</span>
+<span>  iterations <span class="op">=</span> <span class="fl">100</span>,</span>
+<span>  zoom <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  set <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"mandelbrot"</span>, <span class="st">"multibrot"</span>, <span class="st">"julia"</span>, <span class="st">"ship"</span><span class="op">)</span>,</span>
+<span>  left <span class="op">=</span> <span class="op">-</span><span class="fl">2.16</span>,</span>
+<span>  right <span class="op">=</span> <span class="fl">1.16</span>,</span>
+<span>  bottom <span class="op">=</span> <span class="op">-</span><span class="fl">1.66</span>,</span>
+<span>  top <span class="op">=</span> <span class="fl">1.66</span>,</span>
+<span>  resolution <span class="op">=</span> <span class="fl">500</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -132,9 +139,9 @@
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="fu">canvas_mandelbrot</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"tuscany1"</span><span class="op">)</span>, set <span class="op">=</span> <span class="st">"mandelbrot"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="canvas_mandelbrot-1.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="canvas_mandelbrot-1.png" alt="" width="700" height="700"></span>
 <span class="r-in"><span><span class="fu">canvas_mandelbrot</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"flag"</span><span class="op">)</span>, set <span class="op">=</span> <span class="st">"julia"</span>, zoom <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="canvas_mandelbrot-2.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="canvas_mandelbrot-2.png" alt="" width="700" height="700"></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
