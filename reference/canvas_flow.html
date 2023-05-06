@@ -72,6 +72,7 @@
 <span>  lwd <span class="op">=</span> <span class="fl">0.05</span>,</span>
 <span>  iterations <span class="op">=</span> <span class="fl">100</span>,</span>
 <span>  stepmax <span class="op">=</span> <span class="fl">0.01</span>,</span>
+<span>  outline <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"none"</span>, <span class="st">"circle"</span>, <span class="st">"square"</span><span class="op">)</span>,</span>
 <span>  polar <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  angles <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -101,6 +102,10 @@
 
 <dt>stepmax</dt>
 <dd><p>the maximum proportion of the canvas covered in each iteration.</p></dd>
+
+
+<dt>outline</dt>
+<dd><p>character. Which outline to use for the artwork. Possible options are <code>none</code> (default), <code>circle</code> or <code>square</code>.</p></dd>
 
 
 <dt>polar</dt>
@@ -139,6 +144,13 @@
 <span class="r-in"><span><span class="fu">canvas_flow</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"dark2"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="canvas_flow-1.png" alt="" width="2500" height="2500"></span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Example with circle outline</span></span></span>
+<span class="r-in"><span><span class="fu">canvas_flow</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  colors <span class="op">=</span> <span class="fu"><a href="colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"dark2"</span><span class="op">)</span>, background <span class="op">=</span> <span class="st">"black"</span>,</span></span>
+<span class="r-in"><span>  lines <span class="op">=</span> <span class="fl">10000</span>, outline <span class="op">=</span> <span class="st">"circle"</span>, iterations <span class="op">=</span> <span class="fl">10</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="canvas_flow-2.png" alt="" width="2500" height="2500"></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Advanced example</span></span></span>
 <span class="r-in"><span><span class="va">angles</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">200</span>, <span class="fl">200</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">angles</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fl">0</span>, to <span class="op">=</span> <span class="fl">2</span> <span class="op">*</span> <span class="va">pi</span>, length <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span></span>
@@ -148,11 +160,11 @@
 <span class="r-in"><span>  colors <span class="op">=</span> <span class="fu"><a href="colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"tuscany1"</span><span class="op">)</span>, background <span class="op">=</span> <span class="st">"black"</span>,</span></span>
 <span class="r-in"><span>  angles <span class="op">=</span> <span class="va">angles</span>, lwd <span class="op">=</span> <span class="fl">0.4</span>, lines <span class="op">=</span> <span class="fl">1000</span>, stepmax <span class="op">=</span> <span class="fl">0.001</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="canvas_flow-2.png" alt="" width="2500" height="2500"></span>
+<span class="r-plt img"><img src="canvas_flow-3.png" alt="" width="2500" height="2500"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Polar example</span></span></span>
 <span class="r-in"><span><span class="fu">canvas_flow</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"vrolik2"</span><span class="op">)</span>, lines <span class="op">=</span> <span class="fl">300</span>, lwd <span class="op">=</span> <span class="fl">0.5</span>, polar <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="canvas_flow-3.png" alt="" width="2500" height="2500"></span>
+<span class="r-plt img"><img src="canvas_flow-4.png" alt="" width="2500" height="2500"></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
