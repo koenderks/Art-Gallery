@@ -281,6 +281,14 @@ test_that("canvas_swirls()", {
   set.seed(2)
   .runtime(expression = {
     artwork <- canvas_swirls(colors = c("red", "blue", "green"), n = 10, iterations = 10)
-  }, name = "Splatter")
+  }, name = "Swirls")
+  expect_equal(!is.null(artwork), TRUE)
+})
+
+test_that("canvas_lissajous()", {
+  set.seed(2)
+  .runtime(expression = {
+    artwork <- canvas_lissajous(colors = c("red", "blue", "green"))
+  }, name = "Lissajous")
   expect_equal(!is.null(artwork), TRUE)
 })
