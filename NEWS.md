@@ -1,6 +1,7 @@
 # aRtsy 0.2.4
 
- - Added new color palettes `neo1`, `neo2` and `neo3`.
+ - Added new color palettes `neo1`, `neo2`, `neo3`, `shell1`, `shell2` and `shell3`.
+ - Added new function `canvas_lissajous()`.
 
 # aRtsy 0.2.3
 

@@ -50,6 +50,7 @@ reference:
       - canvas_collatz
       - canvas_flame
       - canvas_flow
+      - canvas_lissajous
       - canvas_maze
       - canvas_mesh
       - canvas_petri

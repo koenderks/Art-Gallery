@@ -60,6 +60,7 @@ saveCanvas(artwork, filename = "myArtwork.png")
 * [`canvas_collatz()`](#collatz-conjecture)
 * [`canvas_flame()`](#fractal-flames)
 * [`canvas_flow()`](#flow-fields)
+* [`canvas_lissajous()`](#lissajous-curves)
 * [`canvas_maze()`](#mazes)
 * [`canvas_mesh()`](#meshes)
 * [`canvas_petri()`](#petri-dishes)
@@ -218,6 +219,24 @@ You can use the `canvas_flow()` function to make your own artwork using this alg
 set.seed(1)
 canvas_flow(colors = colorPalette("dark2"))
 # see ?canvas_flow for more input parameters of this function
+```
+
+#### Lissajous curves
+
+This function draws [Lissajous curves](https://en.wikipedia.org/wiki/Lissajous_curve) and subsequently connects the points on the curve to its *k*-nearest neighbors. The function is inspired by the Lissajous curves implemented in Marcus Volz's [mathart](https://github.com/marcusvolz/mathart) package but adds colors into the mix.
+
+<p align="center">
+  <img src='https://github.com/koenderks/aRtsy/raw/development/png/lissajous/2023-08-17.png' width='30%'>
+  <img src='https://github.com/koenderks/aRtsy/raw/development/png/lissajous/2023-08-18.png' width='30%'>
+  <img src='https://github.com/koenderks/aRtsy/raw/development/png/lissajous/2023-08-19.png' width='30%'>
+</p>
+
+You can use the `canvas_lissajous()` function to make your own artwork using this algorithm.
+
+```r
+set.seed(1)
+canvas_lissajous(colors = colorPalette("blossom"))
+# see ?canvas_lissajous for more input parameters of this function
 ```
 
 #### Mazes

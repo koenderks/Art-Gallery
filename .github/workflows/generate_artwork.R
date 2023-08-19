@@ -25,7 +25,7 @@ seed <- as.numeric(Sys.Date())
 set.seed(seed)
 
 # Select artwork type
-type <- sample.int(33, 1)
+type <- sample.int(34, 1)
 
 # Create artwork with random palette, feel free to suggest a new palette at https://github.com/koenderks/aRtsy/issues
 artwork <- switch(type,
@@ -61,7 +61,8 @@ artwork <- switch(type,
   "30" = canvas_flame(colors = colorPalette("random-palette"), background = sample(c("#fafafa", "firebrick", "#f9f0e0", "black", "lavenderblush2", "#215682"), 1), variations = sample(0:48, 3), symmetry = sample(-1:2, 1), iterations = 1e9, weighted = TRUE, post = sample(c(FALSE, TRUE), 1)),
   "31" = canvas_smoke(colors = if (runif(1) < 2 / 3) colorPalette(sample(c("divergent", "random", "complement"), 1), n = 1024) else "all", algorithm = sample(c("minimum", "average"), 1), init = sample.int(3, 1), shape = sample(c("bursts", "clouds"), 1), resolution = 500),
   "32" = canvas_tiles(colors = .tile_helper(sample.int(7, 1)), iterations = sample(2000:10000, 1), size = sample(4:7, 1)),
-  "33" = canvas_swirls(colors = colorPalette("random-palette"), background = sample(c("black", "#fafafa", "#fc7c7c", "#cc7722", "#a9d2c3"), 1), iterations = sample(250:2000, 1), n = sample(50:2000, 1), curvature = runif(1, 0.001, 0.01), resolution = sample(100:2000, 1))
+  "33" = canvas_swirls(colors = colorPalette("random-palette"), background = sample(c("black", "#fafafa", "#fc7c7c", "#cc7722", "#a9d2c3"), 1), iterations = sample(250:2000, 1), n = sample(50:2000, 1), curvature = runif(1, 0.001, 0.01), resolution = sample(100:2000, 1)),
+  "34" = canvas_lissajous(colors = colorPalette("random-palette"), background = sample(c("#fafafa", "firebrick", "#f9f0e0", "black", "lavenderblush2", "#215682"), 1), iterations = sample(2:5, size = 1))
 )
 
 saveCanvas(artwork, filename, width = ifelse(type == 19, yes = NA, no = 7), height = ifelse(type == 19, yes = NA, no = 7))
