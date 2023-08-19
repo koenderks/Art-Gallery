@@ -8,7 +8,8 @@ canvas_lissajous(
   colors,
   background = "#000000",
   iterations = 2,
-  neighbors = 50
+  neighbors = 50,
+  noise = FALSE
 )
 }
 \arguments{
@@ -18,7 +19,9 @@ canvas_lissajous(
 
 \item{iterations}{a positive integer specifying the number of iterations of the algorithm.}
 
-\item{neighbors}{a positive integer specifying the number of neighbors a block considers when taking over a color.}
+\item{neighbors}{a positive integer specifying the number of neighbors a block considers when drawing the connections.}
+
+\item{noise}{logical. Whether to add perlin noise to the coordinates of the nodes.}
 }
 \value{
 A \code{ggplot} object containing the artwork.

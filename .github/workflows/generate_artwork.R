@@ -62,7 +62,7 @@ artwork <- switch(type,
   "31" = canvas_smoke(colors = if (runif(1) < 2 / 3) colorPalette(sample(c("divergent", "random", "complement"), 1), n = 1024) else "all", algorithm = sample(c("minimum", "average"), 1), init = sample.int(3, 1), shape = sample(c("bursts", "clouds"), 1), resolution = 500),
   "32" = canvas_tiles(colors = .tile_helper(sample.int(7, 1)), iterations = sample(2000:10000, 1), size = sample(4:7, 1)),
   "33" = canvas_swirls(colors = colorPalette("random-palette"), background = sample(c("black", "#fafafa", "#fc7c7c", "#cc7722", "#a9d2c3"), 1), iterations = sample(250:2000, 1), n = sample(50:2000, 1), curvature = runif(1, 0.001, 0.01), resolution = sample(100:2000, 1)),
-  "34" = canvas_lissajous(colors = colorPalette("random-palette"), background = sample(c("#fafafa", "firebrick", "#f9f0e0", "black", "lavenderblush2", "#215682"), 1), iterations = sample(2:5, size = 1))
+  "34" = canvas_lissajous(colors = colorPalette("random-palette"), background = sample(c("#fafafa", "#f9f0e0", "black", "lavenderblush2", "salmon"), 1), iterations = sample(2:5, 1), noise = sample(c(TRUE, FALSE), 1))
 )
 
 saveCanvas(artwork, filename, width = ifelse(type == 19, yes = NA, no = 7), height = ifelse(type == 19, yes = NA, no = 7))

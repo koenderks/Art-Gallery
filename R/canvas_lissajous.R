@@ -21,13 +21,15 @@
 #'   colors,
 #'   background = "#000000",
 #'   iterations = 2,
-#'   neighbors = 50
+#'   neighbors = 50,
+#'   noise = FALSE
 #' )
 #'
 #' @param colors      a string or character vector specifying the color(s) used for the artwork.
 #' @param background  a character specifying the color used for the background.
 #' @param iterations  a positive integer specifying the number of iterations of the algorithm.
-#' @param neighbors   a positive integer specifying the number of neighbors a block considers when taking over a color.
+#' @param neighbors   a positive integer specifying the number of neighbors a block considers when drawing the connections.
+#' @param noise       logical. Whether to add perlin noise to the coordinates of the nodes.
 #'
 #' @return A \code{ggplot} object containing the artwork.
 #'
@@ -52,7 +54,8 @@
 canvas_lissajous <- function(colors,
                              background = "#000000",
                              iterations = 2,
-                             neighbors = 50) {
+                             neighbors = 50,
+                             noise = FALSE) {
   .checkUserInput(iterations = iterations, background = background)
   stopifnot("'neighbors' must be > 0" = neighbors > 0)
   d <- stats::runif(1, 1, 100)
@@ -63,10 +66,16 @@ canvas_lissajous <- function(colors,
   A <- stats::runif(1, 1, 10)
   B <- stats::runif(1, 1, 10)
   C <- stats::runif(1, 1, 10)
-  t <- seq(from = 0, to = iterations * pi, length.out = 1000)
+  npoints <- 1000
+  t <- seq(from = 0, to = iterations * pi, length.out = npoints)
   x <- A * sin(a * t + d)
   y <- B * sin(b * t)
   z <- C * sin(c * t + e)
+  if (noise) {
+    x <- x + as.numeric(.noise(dims = c(1, npoints), type = "perlin", limits = c(-1, 1)))
+    y <- y + as.numeric(.noise(dims = c(1, npoints), type = "perlin", limits = c(-1, 1)))
+    z <- z + as.numeric(.noise(dims = c(1, npoints), type = "perlin", limits = c(-1, 1)))
+  }
   df <- data.frame(t = t, x = x, y = y, z = z)
   n <- nrow(df)
   all_neighbors <- lapply(1:n, function(ptnum) {
