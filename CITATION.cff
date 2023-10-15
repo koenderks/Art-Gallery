@@ -23,7 +23,7 @@ preferred-citation:
     given-names: Koen
     email: koen-derks@hotmail.com
   year: '2023'
-  notes: R package version 0.2.4
+  notes: R package version 1.0.0
   url: https://CRAN.R-project.org/package=aRtsy
 repository: https://CRAN.R-project.org/package=aRtsy
 repository-code: https://github.com/koenderks/aRtsy
