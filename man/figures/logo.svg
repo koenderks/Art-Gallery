@@ -89,13 +89,13 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="pt"
      showgrid="false"
-     inkscape:zoom="1.988543"
-     inkscape:cx="168.96793"
-     inkscape:cy="180.28275"
+     inkscape:zoom="2.8288134"
+     inkscape:cx="122.31277"
+     inkscape:cy="183.64591"
      inkscape:window-width="1512"
      inkscape:window-height="833"
      inkscape:window-x="0"
-     inkscape:window-y="39"
+     inkscape:window-y="38"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg342" />
   <rect
@@ -126,10 +126,6 @@
      style="fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:0.213;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
      d="m 80.768025,101.20728 3.086873,6.20371 0.359632,1.19878 0.599393,1.73824 0.419572,0.92905 -0.749242,0.20979 -4.28565,-10.15969 0.44955,-0.11988 z"
      id="path43686" />
-  <path
-     style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.213;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     d="m 24.623796,100.64234 2.147159,-0.18274 31.980097,67.542 -1.980373,0.57761 -3.383136,-5.28099 -9.40677,-20.87643 -16.255558,-34.73903 z"
-     id="path43630" />
   <ellipse
      style="fill:#3b517c;fill-opacity:1;stroke:#000000;stroke-width:0.213;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
      id="path42978"
@@ -224,9 +220,9 @@
      transform="matrix(1.0330608,0,0,1.0330579,-163.5107,-36.213629)"><tspan
        x="225.10438"
        y="259.48023"
-       id="tspan44822"><tspan
+       id="tspan1158"><tspan
          style="font-family:'American Typewriter';-inkscape-font-specification:'American Typewriter Bold'"
-         id="tspan44820">aRtsy</tspan></tspan></text>
+         id="tspan1156">aRtsy</tspan></tspan></text>
   <g
      transform="matrix(0.02311256,0,0,-0.02311256,-3.8999319,230.04604)"
      fill="#000000"
