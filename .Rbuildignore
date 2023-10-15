@@ -13,4 +13,5 @@ aRtsyRelease.R
 ^CITATION\.cff$
 ^\.github$
 ^_pkgdown.yml$
+^man/figures/logo.svg
 .lintr

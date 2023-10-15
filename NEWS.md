@@ -1,3 +1,8 @@
+# aRtsy 1.0.0
+
+- Bump version number to 0.1.0.
+- Added new logo!
+
 # aRtsy 0.2.4
 
  - Added new color palettes `neo1`, `neo2`, `neo3`, `shell1`, `shell2` and `shell3`.
