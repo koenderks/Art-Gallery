@@ -1,7 +1,7 @@
 ## aRtsy version 1.0.0
 This is a submission for aRtsy version 1.0.0. In this version I have:
 
-* Bumped the version number to 1.0.0.
+* Fixed a bug in the c++ code.
 * Improved documentation.
 
 ## Test environments

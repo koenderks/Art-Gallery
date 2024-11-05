@@ -53,7 +53,7 @@
 #'
 #' \itemize{
 #'  \item{\code{0}: Linear (default)}
-#'  \item{\code{1}: Sine}
+#'  \item{\code{1}: Sinusoidal}
 #'  \item{\code{2}: Spherical}
 #'  \item{\code{3}: Swirl}
 #'  \item{\code{4}: Horsehoe}
@@ -136,7 +136,7 @@
 #' # Simple example, linear variation, dihedral symmetry
 #' canvas_flame(colors = c("hotpink", "yellow"), variations = 0, symmetry = -1, iterations = 1e7)
 #'
-#' # Advanced example (no-blend, weighted, sine and spherical variations)
+#' # Advanced example (no-blend, weighted, sinusoidal and spherical variations)
 #' canvas_flame(
 #'   colors = colorPalette("origami"), variations = c(1, 2),
 #'   blend = FALSE, weighted = TRUE, iterations = 1e8

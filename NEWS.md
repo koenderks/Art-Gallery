@@ -1,6 +1,6 @@
 # aRtsy 1.0.0
 
-- Bump version number to 0.1.0.
+- Fixed a bug in the `canvas_flame()` code when `blend = FALSE` and `weighted = TRUE`.
 - Added new logo!
 
 # aRtsy 0.2.4

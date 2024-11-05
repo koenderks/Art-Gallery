@@ -439,7 +439,7 @@ arma::cube cpp_flame(arma::cube& canvas,
           }
           x = xc, y = yc;
         } else { // Do not blend variations
-          const int j = weighted ? Rcpp::sample(Rcpp::IntegerVector::create(0, variations.size() - 1), 1, false, Rcpp::as<Rcpp::NumericVector>(Rcpp::wrap(varWeights.row(i))))[0] : floor(R::runif(0, nvar));
+          const int j = (variations.size() == 1) ? 0 : (weighted ? Rcpp::sample(Rcpp::IntegerVector::create(0, variations.size() - 1), 1, false, Rcpp::as<Rcpp::NumericVector>(Rcpp::wrap(varWeights.row(i))))[0] : floor(R::runif(0, nvar)));
           variation(x, y, variations[j], funcPars.at(i, 0), funcPars.at(i, 1), funcPars.at(i, 2), funcPars.at(i, 3), funcPars.at(i, 4), funcPars.at(i, 5), varParams);
         }
       }
