@@ -43,7 +43,7 @@ canvas_mesh(colors = colorPalette("origami"))
 
 }
 \references{
-\url{http://rectangleworld.com/blog/archives/462}
+\url{https://web.archive.org/web/20231130151102/http://rectangleworld.com/blog/archives/462}
 }
 \seealso{
 \code{colorPalette}

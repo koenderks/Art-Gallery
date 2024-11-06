@@ -38,7 +38,7 @@
 #'
 #' @author Koen Derks, \email{koen-derks@hotmail.com}
 #'
-#' @references \url{http://rectangleworld.com/blog/archives/462}
+#' @references \url{https://web.archive.org/web/20231130151102/http://rectangleworld.com/blog/archives/462}
 #'
 #' @keywords artwork canvas
 #'

@@ -259,7 +259,7 @@ canvas_maze(color = "#fafafa")
 
 #### Meshes
 
-This artwork creates one or more rotating circular morphing meshes on the canvas. The idea behind this artwork is described in [this blogpost](http://rectangleworld.com/blog/archives/462) by Dan Gries with the simple words: *"deformed circles move across the canvas, and trace out these shapes"*. The circle has a three random components at each time step: the center, the radius, and the increase in the radius.
+This artwork creates one or more rotating circular morphing meshes on the canvas. The idea behind this artwork is described in [this blogpost](https://web.archive.org/web/20231130151102/http://rectangleworld.com/blog/archives/462) by Dan Gries with the simple words: *"deformed circles move across the canvas, and trace out these shapes"*. The circle has a three random components at each time step: the center, the radius, and the increase in the radius.
 
 <p align="center">
   <img src='https://github.com/koenderks/aRtsy/raw/development/png/meshes/2022-10-03.png' width='30%'>
