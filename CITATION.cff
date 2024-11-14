@@ -16,7 +16,7 @@ identifiers:
 - type: url
   value: https://twitter.com/aRtsy_package
 - type: url
-  value: https://botsin.space/web/@aRtsy_package
+  value: https://mastodon.social/@aRtsy_package
 abstract: Provides algorithms for creating artworks in the 'ggplot2' language that
   incorporate some form of randomness.
 authors:
