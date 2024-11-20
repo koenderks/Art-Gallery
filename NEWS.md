@@ -1,5 +1,6 @@
 # aRtsy 1.0.1
 
+- Added `canvas_slime()`.
 - Faster runtime of the `canvas_flame()` funtion.
 
 # aRtsy 1.0.0

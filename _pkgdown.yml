@@ -57,6 +57,7 @@ reference:
       - canvas_phyllotaxis
       - canvas_planet
       - canvas_recaman
+      - canvas_slime
       - canvas_smoke
       - canvas_splits
       - canvas_stripes

@@ -282,6 +282,26 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// iterate_slime
+arma::mat iterate_slime(arma::mat canvas, arma::mat agents, const double& decay_factor, const double& forward_left, const double& forward_right, const double& rotation_angle, const double& sensor_offset, const int& step_size, const double& decomposition, const int& iters);
+RcppExport SEXP _aRtsy_iterate_slime(SEXP canvasSEXP, SEXP agentsSEXP, SEXP decay_factorSEXP, SEXP forward_leftSEXP, SEXP forward_rightSEXP, SEXP rotation_angleSEXP, SEXP sensor_offsetSEXP, SEXP step_sizeSEXP, SEXP decompositionSEXP, SEXP itersSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::mat >::type canvas(canvasSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type agents(agentsSEXP);
+    Rcpp::traits::input_parameter< const double& >::type decay_factor(decay_factorSEXP);
+    Rcpp::traits::input_parameter< const double& >::type forward_left(forward_leftSEXP);
+    Rcpp::traits::input_parameter< const double& >::type forward_right(forward_rightSEXP);
+    Rcpp::traits::input_parameter< const double& >::type rotation_angle(rotation_angleSEXP);
+    Rcpp::traits::input_parameter< const double& >::type sensor_offset(sensor_offsetSEXP);
+    Rcpp::traits::input_parameter< const int& >::type step_size(step_sizeSEXP);
+    Rcpp::traits::input_parameter< const double& >::type decomposition(decompositionSEXP);
+    Rcpp::traits::input_parameter< const int& >::type iters(itersSEXP);
+    rcpp_result_gen = Rcpp::wrap(iterate_slime(canvas, agents, decay_factor, forward_left, forward_right, rotation_angle, sensor_offset, step_size, decomposition, iters));
+    return rcpp_result_gen;
+END_RCPP
+}
 // cpp_smoke
 arma::cube cpp_smoke(arma::cube& canvas, arma::umat coords, const arma::umat& color_mat, const int& init, const int& algorithm, const int& shape, const bool& all_colors);
 RcppExport SEXP _aRtsy_cpp_smoke(SEXP canvasSEXP, SEXP coordsSEXP, SEXP color_matSEXP, SEXP initSEXP, SEXP algorithmSEXP, SEXP shapeSEXP, SEXP all_colorsSEXP) {
@@ -445,6 +465,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_aRtsy_cpp_planet", (DL_FUNC) &_aRtsy_cpp_planet, 12},
     {"_aRtsy_cpp_polylines", (DL_FUNC) &_aRtsy_cpp_polylines, 5},
     {"_aRtsy_cpp_recaman", (DL_FUNC) &_aRtsy_cpp_recaman, 3},
+    {"_aRtsy_iterate_slime", (DL_FUNC) &_aRtsy_iterate_slime, 10},
     {"_aRtsy_cpp_smoke", (DL_FUNC) &_aRtsy_cpp_smoke, 7},
     {"_aRtsy_cpp_splits", (DL_FUNC) &_aRtsy_cpp_splits, 8},
     {"_aRtsy_cpp_squares", (DL_FUNC) &_aRtsy_cpp_squares, 5},

@@ -67,6 +67,7 @@ saveCanvas(artwork, filename = "myArtwork.png")
 * [`canvas_phyllotaxis()`](#phyllotaxis)
 * [`canvas_planet()`](#planets)
 * [`canvas_recaman()`](#recamáns-sequence)
+* [`canvas_slime()`](#slime-mold)
 * [`canvas_smoke()`](#rainbow-smoke)
 * [`canvas_splits()`](#split-lines)
 * [`canvas_stripes()`](#stripes)
@@ -345,6 +346,24 @@ You can use the `canvas_recaman()` function to make your own artwork using this 
 set.seed(1)
 canvas_recaman(colors = colorPalette("random", n = 10))
 # see ?canvas_recaman for more input parameters of this function
+```
+
+#### Slime mold
+
+This function implements the [Physarium](https://doi.org/10.1162/artl.2010.16.2.16202) model, which is neatly described in [this blogpost](https://cargocollective.com/sagejenson/physarum) by Sage Jenson and [this blogpost](https://fronkonstin.com/2020/08/11/abstractions/) by Antonio Sánchez Chinchón. The algorithm simulates particles on a two-dimensional grid that move towards areas on the grid with a high intensity.
+
+<p align="center">
+  <img src='https://github.com/koenderks/aRtsy/raw/development/png/slimes/2024-11-19.png' width='30%'>
+  <img src='https://github.com/koenderks/aRtsy/raw/development/png/slimes/2024-11-18.png' width='30%'>
+  <img src='https://github.com/koenderks/aRtsy/raw/development/png/slimes/2024-11-20.png' width='30%'>
+</p>
+
+You can use the `canvas_slime()` function to make your own artwork using this algorithm.
+
+```r
+set.seed(1)
+canvas_slime(colors = colorPalette("neon1"))
+# see ?canvas_slime for more input parameters of this function
 ```
 
 #### Rainbow smoke

@@ -292,3 +292,11 @@ test_that("canvas_lissajous()", {
   }, name = "Lissajous")
   expect_equal(!is.null(artwork), TRUE)
 })
+
+test_that("canvas_slime()", {
+  set.seed(1)
+  .runtime(expression = {
+    artwork <- canvas_slime(colors = c("red", "blue", "green"))
+  }, name = "Slime")
+  expect_equal(!is.null(artwork), TRUE)
+})

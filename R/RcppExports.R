@@ -69,6 +69,10 @@ cpp_recaman <- function(n, start, increment) {
     .Call('_aRtsy_cpp_recaman', PACKAGE = 'aRtsy', n, start, increment)
 }
 
+iterate_slime <- function(canvas, agents, decay_factor, forward_left, forward_right, rotation_angle, sensor_offset, step_size, decomposition, iters) {
+    .Call('_aRtsy_iterate_slime', PACKAGE = 'aRtsy', canvas, agents, decay_factor, forward_left, forward_right, rotation_angle, sensor_offset, step_size, decomposition, iters)
+}
+
 cpp_smoke <- function(canvas, coords, color_mat, init, algorithm, shape, all_colors) {
     .Call('_aRtsy_cpp_smoke', PACKAGE = 'aRtsy', canvas, coords, color_mat, init, algorithm, shape, all_colors)
 }
