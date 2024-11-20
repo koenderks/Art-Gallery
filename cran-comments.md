@@ -1,8 +1,7 @@
-## aRtsy version 1.0.0
-This is a submission for aRtsy version 1.0.0. In this version I have:
+## aRtsy version 1.0.1
+This is a submission for aRtsy version 1.0.1. In this version I have:
 
-* Fixed a bug in the c++ code.
-* Improved documentation.
+* Improved performance of c++ code.
 
 ## Test environments
 * Windows install, (on github actions) R release

@@ -1,8 +1,8 @@
 Package: aRtsy
 Title: Generative Art with 'ggplot2'
 Description: Provides algorithms for creating artworks in the 'ggplot2' language that incorporate some form of randomness.
-Version: 1.0.0
-Date: 2024-11-05
+Version: 1.0.1
+Date: 2024-11-20
 Authors@R: 
     person(given = "Koen",
            family = "Derks",

@@ -241,11 +241,11 @@ canvas_flame <- function(colors,
     stats::runif(4, 0, 1), # padj.a, pdj.b, pdj.c, pdj.d
     stats::runif(1, 0, 1), # rings2.val
     stats::runif(1, 10, 80), stats::runif(1, 1, 10), # perspective.angle, perspective.dist
-    stats::runif(1, 1, 5), stats::runif(1, 0.1, 1), # juliaN.power, juliaN.dist
-    stats::runif(1, 1, 5), stats::runif(1, 0.1, 1), # juliaScope.power, juliaScope.dist
+    stats::runif(1, -5, 5), stats::runif(1, 0.1, 1), # juliaN.power, juliaN.dist
+    stats::runif(1, -5, 5), stats::runif(1, 0.1, 1), # juliaScope.power, juliaScope.dist
     stats::runif(1, 0, 360), stats::runif(1, 0.5, 10), # radialBlur.angle, v_36
     sample(x = 3:8, size = 1), stats::runif(1, 1, 360), stats::runif(1, 0, 1), # pie.slices, pie.rotation, pie.thickness
-    stats::runif(1, 1, 2), sample(3:9, size = 1), sample(3:9, size = 1), stats::runif(1, 0, 1), # ngon.power, ngon.sides, ngon.corners, ngon.circle
+    stats::runif(1, 1, 5), sample(3:9, size = 1), sample(3:9, size = 1), stats::runif(1, 0, 1), # ngon.power, ngon.sides, ngon.corners, ngon.circle
     stats::runif(1, -1.5, -0.5), stats::runif(1, 0.5, 1.5), # curl.c1, curl.c2
     stats::runif(1, -1, 1), stats::runif(1, -1, 1), # rectangles.x, rectangles.y
     stats::runif(1, -1, 1), # v_41

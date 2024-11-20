@@ -1,3 +1,7 @@
+# aRtsy 1.0.1
+
+- Faster runtime of the `canvas_flame()` funtion.
+
 # aRtsy 1.0.0
 
 - Fixed a bug in the `canvas_flame()` code when `blend = FALSE` and `weighted = TRUE`.
