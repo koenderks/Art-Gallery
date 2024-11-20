@@ -63,7 +63,7 @@ artwork <- switch(type,
   "32" = canvas_tiles(colors = .tile_helper(sample.int(7, 1)), iterations = sample(2000:10000, 1), size = sample(4:7, 1)),
   "33" = canvas_swirls(colors = colorPalette("random-palette"), background = sample(c("black", "#fafafa", "#fc7c7c", "#cc7722", "#a9d2c3"), 1), iterations = sample(250:2000, 1), n = sample(50:2000, 1), curvature = runif(1, 0.001, 0.01), resolution = sample(100:2000, 1)),
   "34" = canvas_lissajous(colors = colorPalette("random-palette"), background = sample(c("#fafafa", "#f9f0e0", "black", "lavenderblush2", "salmon"), 1), iterations = sample(2:5, 1), noise = sample(c(TRUE, FALSE), 1)),
-  "35" = canvas_slime(colors = colorPalette("random-palette"), background = sample(c("black", "#fafafa", "#fc7c7c", "#a9d2c3", "goldenrod", "dodgerblue"), 1), layout = sample(c("gaussian", "circle", "grid", "clustered"), 1), iterations = sample(2000:20000, 1))
+  "35" = canvas_slime(colors = colorPalette("random-palette"), background = sample(c("black", "#fafafa", "#fc7c7c", "#a9d2c3", "goldenrod", "dodgerblue"), 1), iterations = sample(2000:20000, 1))
 )
 
 saveCanvas(artwork, filename, width = ifelse(type == 19, yes = NA, no = 7), height = ifelse(type == 19, yes = NA, no = 7))

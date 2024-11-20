@@ -9,7 +9,10 @@ canvas_slime(
   background = "#000000",
   iterations = 2000,
   agents = 1000,
-  layout = c("gaussian", "circle", "grid", "clustered"),
+  layout = c(
+     "random", "gaussian", "circle", "grid",
+     "clusters", "arrows", "wave", "spiral"
+  ),
   resolution = 1000
 )
 }
@@ -25,8 +28,8 @@ the algorithm.}
 \item{agents}{a positive integer specifying the number of agents to use.}
 
 \item{layout}{a character specifying the initial layout of the agents.
-Possible options are \code{gaussian} (default), \code{circle}, \code{grid}
-and \code{clustered}.}
+Possible options are \code{random} (default), \code{gaussian},
+\code{circle}, \code{grid}, \code{clusters}, \code{arrows} and \code{wave}.}
 
 \item{resolution}{resolution of the artwork in pixels per row/column.
 Increasing the resolution increases the quality of the artwork but also
@@ -37,7 +40,8 @@ A \code{ggplot} object containing the artwork.
 }
 \description{
 This function draws the Physarum polycephalum slime mold on a
-  canvas.
+  canvas. The algorithm simulates particles on a two-dimensional grid that
+  move towards areas on the grid with a high intensity.
 }
 \examples{
 \donttest{

@@ -16,14 +16,18 @@
 #' Draw A Slime Mold
 #'
 #' @description This function draws the Physarum polycephalum slime mold on a
-#'   canvas.
+#'   canvas. The algorithm simulates particles on a two-dimensional grid that
+#'   move towards areas on the grid with a high intensity.
 #'
 #' @usage canvas_slime(
 #'   colors,
 #'   background = "#000000",
 #'   iterations = 2000,
 #'   agents = 1000,
-#'   layout = c("gaussian", "circle", "grid", "clustered"),
+#'   layout = c(
+#'      "random", "gaussian", "circle", "grid",
+#'      "clusters", "arrows", "wave", "spiral"
+#'   ),
 #'   resolution = 1000
 #' )
 #'
@@ -34,8 +38,8 @@
 #'   the algorithm.
 #' @param agents      a positive integer specifying the number of agents to use.
 #' @param layout      a character specifying the initial layout of the agents.
-#'   Possible options are \code{gaussian} (default), \code{circle}, \code{grid}
-#'   and \code{clustered}.
+#'   Possible options are \code{random} (default), \code{gaussian},
+#'   \code{circle}, \code{grid}, \code{clusters}, \code{arrows} and \code{wave}.
 #' @param resolution  resolution of the artwork in pixels per row/column.
 #'   Increasing the resolution increases the quality of the artwork but also
 #'   increases the computation time exponentially.
@@ -65,9 +69,15 @@ canvas_slime <- function(colors,
                          background = "#000000",
                          iterations = 2000,
                          agents = 1000,
-                         layout = c("gaussian", "circle", "grid", "clustered"),
+                         layout = c(
+                           "random", "gaussian", "circle", "grid",
+                           "clusters", "arrows", "wave", "spiral"
+                         ),
                          resolution = 1000) {
   layout <- match.arg(layout)
+  if (layout == "random") {
+    layout <- sample(c("gaussian", "circle", "grid", "clusters", "arrows", "wave", "spiral"), 1)
+  }
   .checkUserInput(
     background = background, resolution = resolution, iterations = iterations
   )
@@ -121,7 +131,7 @@ canvas_slime <- function(colors,
     )
     grid <- grid[sample.int(nrow(grid), n_rows), ]
     agents <- matrix(c(grid$x, grid$y, stats::runif(n_rows, 0, 2 * pi)), nrow = n_rows)
-  } else if (layout == "clustered") {
+  } else if (layout == "clusters") {
     num_clusters <- floor(n_rows / 10)
     cluster_centers <- matrix(stats::runif(num_clusters * 2, 0, resolution), ncol = 2)
     agents <- matrix(ncol = 3, nrow = 0)
@@ -142,6 +152,51 @@ canvas_slime <- function(colors,
       ), ncol = 3)
       agents <- rbind(agents, extra)
     }
+  } else if (layout == "arrows") {
+    center_x <- stats::runif(1, resolution / 4, 3 * resolution / 4)
+    center_y <- stats::runif(1, resolution / 4, 3 * resolution / 4)
+    diag_x <- stats::runif(1, resolution / 10, resolution / 5)
+    diag_y <- stats::runif(1, resolution / 10, resolution / 5)
+    edge <- sample(1:4, n_rows, replace = TRUE)
+    t <- stats::runif(n_rows, 0, 1)
+    delta_x <- ifelse(edge %% 2 == 1, t * diag_x, diag_x - t * diag_x)
+    delta_y <- ifelse(edge <= 2, -t * diag_y, diag_y - t * diag_y)
+    x_coords <- center_x + ifelse(edge <= 2, delta_x, -delta_x)
+    y_coords <- center_y + ifelse(edge %% 2 == 1, delta_y, -delta_y)
+    agents <- matrix(c(
+      x_coords,
+      y_coords,
+      stats::runif(n_rows, 0, 2 * pi)
+    ), nrow = n_rows)
+  } else if (layout == "wave") {
+    x_coords <- seq(resolution * stats::runif(1, 0, 0.5), resolution * stats::runif(1, 0.5, 1), length.out = n_rows)
+    if (stats::runif(1, 0, 1) < 0.5) {
+      y_coords <- resolution / 2 + cos(x_coords / resolution * 2 * pi) * resolution / 4
+    } else {
+      y_coords <- resolution / 2 + sin(x_coords / resolution * 2 * pi) * resolution / 4
+    }
+    if (stats::runif(1, 0, 1) < 0.5) {
+      x_new <- x_coords
+      y_new <- y_coords
+    } else {
+      x_new <- y_coords
+      y_new <- x_coords
+    }
+    agents <- matrix(c(
+      x_new,
+      y_new,
+      stats::runif(n_rows, 0, 2 * pi)
+    ), nrow = n_rows)
+  } else if (layout == "spiral") {
+    center_x <- stats::runif(1, 0, resolution)
+    center_y <- stats::runif(1, 0, resolution)
+    angles <- seq(0, 4 * pi, length.out = n_rows)
+    radii <- seq(0, resolution / stats::runif(1, 2, 10), length.out = n_rows)
+    agents <- matrix(c(
+      center_x + radii * cos(angles),
+      center_y + radii * sin(angles),
+      stats::runif(n_rows, 0, 2 * pi)
+    ), nrow = n_rows)
   }
   return(agents)
 }
