@@ -8,7 +8,7 @@ message: 'To cite package "aRtsy" in publications use:'
 type: software
 license: GPL-3.0-or-later
 title: 'aRtsy: Generative Art with ''ggplot2'''
-version: 1.0.0
+version: 1.0.1
 doi: 10.32614/CRAN.package.aRtsy
 identifiers:
 - type: doi
@@ -31,13 +31,13 @@ preferred-citation:
     given-names: Koen
     email: koen-derks@hotmail.com
   year: '2024'
-  notes: R package version 1.0.0
+  notes: R package version 1.0.1
   url: https://CRAN.R-project.org/package=aRtsy
   doi: 10.32614/CRAN.package.aRtsy
 repository: https://CRAN.R-project.org/package=aRtsy
 repository-code: https://github.com/koenderks/aRtsy
 url: https://koenderks.github.io/aRtsy/
-date-released: '2024-11-05'
+date-released: '2024-11-20'
 contact:
 - family-names: Derks
   given-names: Koen
