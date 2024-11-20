@@ -130,6 +130,7 @@
 <li><a href="#phyllotaxis"><code>canvas_phyllotaxis()</code></a></li>
 <li><a href="#planets"><code>canvas_planet()</code></a></li>
 <li><a href="#recam%C3%A1ns-sequence"><code>canvas_recaman()</code></a></li>
+<li><a href="#slime-mold"><code>canvas_slime()</code></a></li>
 <li><a href="#rainbow-smoke"><code>canvas_smoke()</code></a></li>
 <li><a href="#split-lines"><code>canvas_splits()</code></a></li>
 <li><a href="#stripes"><code>canvas_stripes()</code></a></li>
@@ -334,13 +335,25 @@
 <span><span class="co"># see ?canvas_recaman for more input parameters of this function</span></span></code></pre></div>
 </div>
 <div class="section level4">
+<h4 id="slime-mold">Slime mold<a class="anchor" aria-label="anchor" href="#slime-mold"></a>
+</h4>
+<p>This function implements the <a href="https://doi.org/10.1162/artl.2010.16.2.16202" class="external-link">Physarium</a> model, which is neatly described in <a href="https://cargocollective.com/sagejenson/physarum" class="external-link">this blogpost</a> by Sage Jenson and <a href="https://fronkonstin.com/2020/08/11/abstractions/" class="external-link">this blogpost</a> by Antonio Sánchez Chinchón. The algorithm simulates particles on a two-dimensional grid that move towards areas on the grid with a high intensity.</p>
+<p align="center">
+<img src="https://github.com/koenderks/aRtsy/raw/development/png/slimes/2024-11-19.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/slimes/2024-11-18.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/slimes/2024-11-20.png" width="30%"></p>
+<p>You can use the <code><a href="reference/canvas_slime.html">canvas_slime()</a></code> function to make your own artwork using this algorithm.</p>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/canvas_slime.html">canvas_slime</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"neon1"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co"># see ?canvas_slime for more input parameters of this function</span></span></code></pre></div>
+</div>
+<div class="section level4">
 <h4 id="rainbow-smoke">Rainbow smoke<a class="anchor" aria-label="anchor" href="#rainbow-smoke"></a>
 </h4>
 <p>This function implements the <a href="http://rainbowsmoke.hu/home" class="external-link">rainbow smoke</a> algorithm, an original idea from Jozsef Fejes. The algorithm works as follows: First, we select an initial color and apply it to a randomly chosen pixel. Next, we proceed to use the remaining colors one at the time and color pixels in a manner where colors that are alike are positioned near each other.</p>
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/smokes/2023-01-10.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/smokes/2023-01-08.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/smokes/2023-01-09.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_smoke.html">canvas_smoke()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_smoke.html">canvas_smoke</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"random"</span>, <span class="fl">1024</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_smoke for more input parameters of this function</span></span></code></pre></div>
@@ -352,7 +365,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/splits/2022-05-03.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/splits/2022-05-01.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/splits/2022-05-02.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_splits.html">canvas_splits()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_splits.html">canvas_splits</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"origami"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_splits for more input parameters of this function</span></span></code></pre></div>
@@ -364,7 +377,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/stripes/2021-08-23.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/stripes/2021-08-24.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/stripes/2021-08-25.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_stripes.html">canvas_stripes()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_stripes.html">canvas_stripes</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"random"</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_stripes for more input parameters of this function</span></span></code></pre></div>
@@ -376,7 +389,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/strokes/2021-03-21.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/strokes/2021-03-20.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/strokes/2021-03-10.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_strokes.html">canvas_strokes()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_strokes.html">canvas_strokes</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"tuscany1"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_strokes for more input parameters of this function</span></span></code></pre></div>
@@ -388,7 +401,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/swirls/2023-05-18.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/swirls/2023-05-20.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/swirls/2023-05-19.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_swirls.html">canvas_swirls()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_swirls.html">canvas_swirls</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"tuscany1"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_swirls for more input parameters of this function</span></span></code></pre></div>
@@ -400,7 +413,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/tiles/2023-04-29.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/tiles/2023-04-28.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/tiles/2023-04-27.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_tiles.html">canvas_tiles()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_tiles.html">canvas_tiles</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"azul"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_tiles for more input parameters of this function</span></span></code></pre></div>
@@ -417,7 +430,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/turmites/2021-03-06.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/turmites/2021-03-09.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/turmites/2021-03-08.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_turmite.html">canvas_turmite()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_turmite.html">canvas_turmite</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"dark2"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_turmite for more input parameters of this function</span></span></code></pre></div>
@@ -429,7 +442,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/watercolors/2021-09-23.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/watercolors/2021-09-22.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/watercolors/2021-09-21.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_watercolors.html">canvas_watercolors()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_watercolors.html">canvas_watercolors</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"tuscany2"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_watercolors for more input parameters of this function</span></span></code></pre></div>
@@ -446,7 +459,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/diamonds/2021-08-06.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/diamonds/2021-08-04.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/diamonds/2021-08-05.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_diamonds.html">canvas_diamonds()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_diamonds.html">canvas_diamonds</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"tuscany1"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_diamonds for more input parameters of this function</span></span></code></pre></div>
@@ -458,7 +471,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/functions/2021-03-17.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/functions/2021-04-08.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/functions/2021-04-04.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_function.html">canvas_function()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_function.html">canvas_function</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"tuscany1"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_function for more input parameters of this function</span></span></code></pre></div>
@@ -470,7 +483,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/polylines/2021-07-22.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/polylines/2021-07-23.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/polylines/2021-07-21.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_polylines.html">canvas_polylines()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_polylines.html">canvas_polylines</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"retro1"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_polylines for more input parameters of this function</span></span></code></pre></div>
@@ -482,9 +495,9 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/ribbons/2021-07-16.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/ribbons/2021-07-15.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/ribbons/2021-07-14.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_ribbons.html">canvas_ribbons()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a><span class="fu">canvas_ribbons</span>(<span class="at">colors =</span> <span class="fu">colorPalette</span>(<span class="st">"retro1"</span>)</span>
-<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a><span class="co"># see ?canvas_ribbons for more input parameters of this function</span></span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a><span class="fu">canvas_ribbons</span>(<span class="at">colors =</span> <span class="fu">colorPalette</span>(<span class="st">"retro1"</span>)</span>
+<span id="cb30-3"><a href="#cb30-3" tabindex="-1"></a><span class="co"># see ?canvas_ribbons for more input parameters of this function</span></span></code></pre></div>
 </div>
 <div class="section level4">
 <h4 id="segments">Segments<a class="anchor" aria-label="anchor" href="#segments"></a>
@@ -493,7 +506,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/segments/2021-08-07.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/segments/2021-08-08.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/segments/2021-08-06.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_segments.html">canvas_segments()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_segments.html">canvas_segments</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"dark1"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_segments for more input parameters of this function</span></span></code></pre></div>
@@ -505,7 +518,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/squares/2021-03-01.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/squares/2021-02-28.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/squares/2021-02-29.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_squares.html">canvas_squares()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_squares.html">canvas_squares</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"retro2"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_squares for more input parameters of this function</span></span></code></pre></div>
@@ -522,7 +535,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/blacklights/2021-08-22.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/blacklights/2021-08-21.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/blacklights/2021-08-20.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_blacklight.html">canvas_blacklight()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_blacklight.html">canvas_blacklight</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"random"</span>, n <span class="op">=</span> <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_blacklight for more input parameters of this function</span></span></code></pre></div>
@@ -534,7 +547,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/forests/2021-08-20.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/forests/2021-08-21.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/forests/2021-08-19.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_forest.html">canvas_forest()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_forest.html">canvas_forest</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"jungle"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_forest for more input parameters of this function</span></span></code></pre></div>
@@ -546,7 +559,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/gemstones/2021-08-20.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/gemstones/2021-08-21.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/gemstones/2021-08-22.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_gemstone.html">canvas_gemstone()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_gemstone.html">canvas_gemstone</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"dark3"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_gemstone for more input parameters of this function</span></span></code></pre></div>
@@ -558,7 +571,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/mosaics/2021-08-17.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/mosaics/2021-08-19.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/mosaics/2021-08-18.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_mosaic.html">canvas_mosaic()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_mosaic.html">canvas_mosaic</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"retro2"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_mosaic for more input parameters of this function</span></span></code></pre></div>
@@ -570,7 +583,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/nebulas/2021-08-29.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/nebulas/2021-08-28.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/nebulas/2021-08-27.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_nebula.html">canvas_nebula()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/canvas_nebula.html">canvas_nebula</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"tuscany1"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_nebula for more input parameters of this function</span></span></code></pre></div>
@@ -587,7 +600,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/circlemaps/2021-04-22b.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/circlemaps/2021-04-22c.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/circlemaps/2021-04-22a.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_circlemap.html">canvas_circlemap()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/canvas_circlemap.html">canvas_circlemap</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"dark2"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_circlemap for more input parameters of this function</span></span></code></pre></div>
 </div>
@@ -598,7 +611,7 @@
 <p align="center">
 <img src="https://github.com/koenderks/aRtsy/raw/development/png/mandelbrots/2021-08-07.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/mandelbrots/2021-08-09.png" width="30%"><img src="https://github.com/koenderks/aRtsy/raw/development/png/mandelbrots/2021-08-08.png" width="30%"></p>
 <p>You can use the <code><a href="reference/canvas_mandelbrot.html">canvas_mandelbrot()</a></code> function to make your own artwork using this algorithm.</p>
-<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/canvas_mandelbrot.html">canvas_mandelbrot</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/colorPalette.html">colorPalette</a></span><span class="op">(</span><span class="st">"tuscany1"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># see ?canvas_mandelbrot for more input parameters of this function</span></span></code></pre></div>
 </div>
