@@ -37,8 +37,8 @@
 #' @param colors     a string or character vector specifying the color(s) used for the artwork.
 #' @param background a character specifying the color used for the background.
 #' @param n          a positive integer specifying the number of random starting integers to use for the lines. Can also be a vector of numbers to use as starting numbers.
-#' @param angle.even a value specifying the angle (in radials) to use in bending the sequence at each odd number.
-#' @param angle.odd  a value specifying the angle (in radials) to use in bending the sequence at each even number.
+#' @param angle.even a value specifying the angle (in radials) to use in bending the sequence at each even number.
+#' @param angle.odd  a value specifying the angle (in radials) to use in bending the sequence at each odd number.
 #' @param side       logical. Whether to put the artwork on its side.
 #'
 #' @return A \code{ggplot} object containing the artwork.

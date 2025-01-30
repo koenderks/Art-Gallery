@@ -20,9 +20,9 @@ canvas_collatz(
 
 \item{n}{a positive integer specifying the number of random starting integers to use for the lines. Can also be a vector of numbers to use as starting numbers.}
 
-\item{angle.even}{a value specifying the angle (in radials) to use in bending the sequence at each odd number.}
+\item{angle.even}{a value specifying the angle (in radials) to use in bending the sequence at each even number.}
 
-\item{angle.odd}{a value specifying the angle (in radials) to use in bending the sequence at each even number.}
+\item{angle.odd}{a value specifying the angle (in radials) to use in bending the sequence at each odd number.}
 
 \item{side}{logical. Whether to put the artwork on its side.}
 }
